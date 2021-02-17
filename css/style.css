@@ -33,12 +33,25 @@ img{
     height: auto;
 }
 
+.button{
+    background: var(--secondary-color) !important;
+    color: #fff !important;
+    /* box-shadow: 0px 16px 24px rgba(140, 52, 43, 0.14), 0px 2px 6px rgba(140, 52, 43, 0.13), 0px 0px 1px rgba(140, 52, 43, 0.11) !important; */
+    box-shadow: 0 0 1em rgba(63, 61, 61, 0.589)   ;
+    border-radius: 5px !important;
+    border: 0;
+    transition: all 0.5s ease;
+}
 
+.button:hover{
+    background: #fff !important;
+    color: #fd7e14 !important;
+    transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
 
 /* Sign In Page
 ========================================== */
-
-.signup{
+.sign-login{
     display: flex;
     position: relative;
     height: 100vh;
@@ -47,7 +60,7 @@ img{
 .left-pane{
     width: 50%;
     height: 100vh;
-    background: linear-gradient(rgba(17, 17, 17, 0.315), rgba(17, 17, 17, 0.37)), url(../img/photo-1470434767159-ac7bf1b43351.jpg) center/cover no-repeat;
+    background: linear-gradient(rgba(17, 17, 17, 0.315), rgba(17, 17, 17, 0.37)), url(../img/photo-1470434767159-ac7bf1b43351.jpg) top/cover no-repeat;
 }
 
 
@@ -67,7 +80,7 @@ img{
     overflow-y: hidden;
 }
 
-.signup-form{
+.signLogin-form{
     position: absolute;
     width: 500px;
     height: auto;
@@ -80,26 +93,19 @@ img{
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
-    padding: 44px;
+    padding: 20px 44px;
     overflow: hidden;
 }
 
 
-.signup-form h1{
+.signLogin-form h1{
     color: var(--secondary-color);
 }
 
-.signup-form a span{
+.signLogin-form a span{
     flex: 1;
 }
 
-.signup-btn{
-    background: var(--secondary-color) !important;
-    color: #fff !important;
-    box-shadow: 0px 16px 24px rgba(140, 52, 43, 0.14), 0px 2px 6px rgba(140, 52, 43, 0.13), 0px 0px 1px rgba(140, 52, 43, 0.11) !important;
-    border-radius: 5px !important;
-    border: 0;
-}
 
 
 .google img{
@@ -112,7 +118,7 @@ img{
     width: 20px;
 }
 
-.signup-form a span{
+.signLogin-form a span{
     font-size: 16px;
     font-weight: normal;
     line-height: 100%;
@@ -123,26 +129,26 @@ img{
 
 
 @media screen and (max-width: 768px){
-    .signup-form{
+    .signLogin-form{
         width: 450px;
     }
 }
 
 @media screen and (max-width: 468px){
-    .signup-form{
+    .signLogin-form{
         width: 400px;
     }
 }
 
 @media screen and (max-width: 378px){
-    .signup-form{
+    .signLogin-form{
         width: 350px;
         padding: 20px;
     }
 }
 
 @media screen and (max-width: 328px){
-    .signup-form{
+    .signLogin-form{
         width: 310px;
         padding: 20px;
     }
@@ -150,7 +156,7 @@ img{
 
 
 @media screen and (max-width: 300px){
-    .signup-form{
+    .signLogin-form{
         width: 270px;
         padding: 20px;
     }
