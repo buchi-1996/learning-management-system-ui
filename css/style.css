@@ -63,11 +63,12 @@ img{
 }
 
 .signup-form{
+    position: relative;
     width: 500px;
     height: auto;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(33px);
-    -webkit-backdrop-filter: blur(33px);
+    -moz-webkit-backdrop-filter: blur(33px);
     border-radius: 15px;
     position: absolute;
     top: 50%;
@@ -75,7 +76,9 @@ img{
     right: 50%;
     transform: translate(-50%, -50%);
     padding: 44px;
+    overflow: hidden;
 }
+
 
 .signup-form h1{
     color: var(--secondary-color);
