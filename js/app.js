@@ -1,8 +1,8 @@
 const passwordViewToggler = document.querySelector('.eye-toggler');
 const passwordInput = document.querySelector('#password');
-let isOpen = true;
 const closeEyeIcon = 'fa-eye-slash';
 const openEyeIcon = 'fa-eye';
+let isOpen = true;
 
 const togglePasswordView = (e) => {
     console.log(e.target.firstElementChild);
@@ -10,7 +10,7 @@ const togglePasswordView = (e) => {
    if(isOpen === false){
        passwordInput.type = 'text';
        e.target.firstElementChild.className =  `fa ${openEyeIcon}`;
-   }else if(isOpen === true){
+   }else{
        passwordInput.type = 'password';
        e.target.firstElementChild.className =  `fa ${closeEyeIcon}`;
    }
