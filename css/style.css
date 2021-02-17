@@ -109,6 +109,10 @@ img{
     cursor: pointer;
 }
 
+.fa-eye-slash{
+    pointer-events: none;
+}
+
 .fa-eye{
     pointer-events: none;
 }
