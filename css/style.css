@@ -119,7 +119,13 @@ img{
 
 @media screen and (max-width: 768px){
     .signup-form{
-        width: 350px;
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 468px){
+    .signup-form{
+        width: 400px;
     }
 }
 
