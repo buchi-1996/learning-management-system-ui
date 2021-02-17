@@ -19,11 +19,13 @@ h1{
     font-weight: 400;
 }
 
-body{
+body, html{
+    position: relative;
     width: 100%;
     height: 100vh;
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.5rem;
+    overflow-y: hidden;
 }
 
 img{
@@ -39,6 +41,7 @@ img{
 .signup{
     display: flex;
     position: relative;
+    height: 100vh;
 }
 
 .left-pane{
@@ -49,10 +52,11 @@ img{
 
 
 .right-pane{
+    height: 100vh;
     position: relative;
     width: 50%;
-    height: 100vh;
     background: linear-gradient(#111, #111);
+    overflow-y: hidden;
 }
 
 .right-pane svg{
@@ -60,10 +64,11 @@ img{
     top: 0;
     right: 0;
     width: 50%;
+    overflow-y: hidden;
 }
 
 .signup-form{
-    position: relative;
+    position: absolute;
     width: 500px;
     height: auto;
     background: rgba(255, 255, 255, 0.1);
@@ -129,7 +134,7 @@ img{
     }
 }
 
-@media screen and (max-width: 368px){
+@media screen and (max-width: 378px){
     .signup-form{
         width: 350px;
         padding: 20px;
@@ -139,6 +144,14 @@ img{
 @media screen and (max-width: 328px){
     .signup-form{
         width: 310px;
+        padding: 20px;
+    }
+}
+
+
+@media screen and (max-width: 300px){
+    .signup-form{
+        width: 270px;
         padding: 20px;
     }
 }
