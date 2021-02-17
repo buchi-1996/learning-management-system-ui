@@ -97,6 +97,29 @@ img{
     overflow: hidden;
 }
 
+.input-password{
+    position: relative;
+}
+
+.eye-toggler{
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.fa-eye{
+    pointer-events: none;
+}
+
+/* .fa-eye-slash{
+    position: absolute;
+    right: 15px;
+    top: 11px;
+    z-index: 99;
+    cursor: pointer;
+} */
 
 .signLogin-form h1{
     color: var(--secondary-color);
