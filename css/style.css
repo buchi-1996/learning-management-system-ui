@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --secondary-color: rgba(242, 153, 74, 1);
+}
+
+a{
+    color: var(--secondary-color);
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Sign In Page
+========================================== */
+
+.signup{
+    display: flex;
+    position: relative;
+}
+
+.left-pane{
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(rgba(17, 17, 17, 0.315), rgba(17, 17, 17, 0.37)), url(../img/photo-1470434767159-ac7bf1b43351.jpg) center/cover no-repeat;
+}
+
+
+.right-pane{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    background: linear-gradient(#111, #111);
+}
+
+.right-pane svg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+}
+
+.signup-form{
+    width: 500px;
+    height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(33px);
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    padding: 44px;
+}
+
+.signup-form h1{
+    color: var(--secondary-color);
+}
+
+.signup-form a span{
+    flex: 1;
+}
+
+.signup-btn{
+    background: var(--secondary-color) !important;
+    color: #fff !important;
+    box-shadow: 0px 16px 24px rgba(140, 52, 43, 0.14), 0px 2px 6px rgba(140, 52, 43, 0.13), 0px 0px 1px rgba(140, 52, 43, 0.11) !important;
+    border-radius: 5px !important;
+    border: 0;
+}
+
+
+.google img{
+    background: transparent;
+    width: 20px;
+}
+
+.facebook img{
+    background: transparent;
+    width: 20px;
+}
+
+.signup-form a span{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 100%;
+}
+/* Sign In Page End
+========================================== */
+
+
+
+@media screen and (max-width: 768px){
+    .signup-form{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 368px){
+    .signup-form{
+        width: 300px;
+        padding: 20px;
+    }
+}
+
+
+
+
+/* About Page
+========================================== */
+
+
+
+/* About Page End
+========================================== */
+
+
+
+
+
