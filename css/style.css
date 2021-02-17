@@ -131,6 +131,13 @@ img{
 
 @media screen and (max-width: 368px){
     .signup-form{
+        width: 350px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 328px){
+    .signup-form{
         width: 310px;
         padding: 20px;
     }
