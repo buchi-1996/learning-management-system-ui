@@ -85,7 +85,7 @@ nav .nav-brand a span{
     height: 100vh;
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.5rem;
-    overflow-y: hidden;
+    background: var(--main-black);
 }
 
 .sign-login{
@@ -94,14 +94,14 @@ nav .nav-brand a span{
     height: 100vh;
 }
 
-.left-pane{
+.left-side{
     width: 50%;
     height: 100vh;
-    background: linear-gradient(0deg, rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url(../img/photo-1470434767159-ac7bf1b43351.jpg) top/cover no-repeat;
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.575), rgba(24, 24, 24, 0.9)), url(../img/photo-1470434767159-ac7bf1b43351.jpg) top/cover no-repeat;
 }
 
 
-.right-pane{
+.right-side{
     height: 100vh;
     position: relative;
     width: 50%;
@@ -109,7 +109,7 @@ nav .nav-brand a span{
     overflow-y: hidden;
 }
 
-.right-pane svg{
+.right-side svg{
     position: absolute;
     top: 0;
     right: 0;
@@ -122,8 +122,8 @@ nav .nav-brand a span{
     width: 500px;
     height: auto;
     background: rgba(255, 255, 255, 0.1);
-    /* -webkit-backdrop-filter: blur(33px); */
-    /* backdrop-filter: blur(33px); */
+    -webkit-backdrop-filter: blur(33px);
+    backdrop-filter: blur(33px);
     border-radius: 15px;
     position: absolute;
     top: 50%;
