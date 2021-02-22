@@ -5,8 +5,7 @@ const openEyeIcon = 'fa-eye';
 let isOpen = true;
 
 const togglePasswordView = (e) => {
-    console.log(e.target.firstElementChild);
-    isOpen = !isOpen;
+   isOpen = !isOpen;
    if(isOpen === false){
        passwordInput.type = 'text';
        e.target.firstElementChild.className =  `fa ${openEyeIcon}`;

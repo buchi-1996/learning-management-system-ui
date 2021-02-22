@@ -8,6 +8,19 @@
 
 :root{
     --secondary-color: rgba(242, 153, 74, 1);
+    --main-black: #202020;
+    --black-bg: #373737;
+    --main-white: #fff;
+    --off-white: #C9C9C9;
+}
+
+
+/* ======================================================================
+        HELPER STYLES
+======================================================================*/
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 a{
@@ -19,24 +32,38 @@ h1{
     font-weight: 400;
 }
 
-body, html{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Ubuntu', sans-serif;
-    line-height: 1.5rem;
-    overflow-y: hidden;
+header{
+    background: var(--main-black);
+    padding: 3px 0;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
+nav .nav-brand{
+    margin-top: 10px;
+}
+
+nav img{
+    width: 30px;
+    cursor: pointer;
+}
+
+nav .nav-brand a{
+    color: var(--main-white);
+}
+
+nav .nav-brand a span{
+    color: var(--secondary-color);
+}
+
 
 .button{
     background: var(--secondary-color) !important;
     color: #fff !important;
-    /* box-shadow: 0px 16px 24px rgba(140, 52, 43, 0.14), 0px 2px 6px rgba(140, 52, 43, 0.13), 0px 0px 1px rgba(140, 52, 43, 0.11) !important; */
     box-shadow: 0 0 1em rgba(63, 61, 61, 0.589)   ;
     border-radius: 5px !important;
     border: 0;
@@ -49,8 +76,18 @@ img{
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-/* Sign In Page
+/* Sign-login In Page
 ========================================== */
+
+#sign-loginWrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5rem;
+    overflow-y: hidden;
+}
+
 .sign-login{
     display: flex;
     position: relative;
@@ -60,7 +97,7 @@ img{
 .left-pane{
     width: 50%;
     height: 100vh;
-    background: linear-gradient(rgba(17, 17, 17, 0.315), rgba(17, 17, 17, 0.37)), url(../img/photo-1470434767159-ac7bf1b43351.jpg) top/cover no-repeat;
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url(../img/photo-1470434767159-ac7bf1b43351.jpg) top/cover no-repeat;
 }
 
 
@@ -68,7 +105,7 @@ img{
     height: 100vh;
     position: relative;
     width: 50%;
-    background: linear-gradient(#111, #111);
+    background: var(--main-black);
     overflow-y: hidden;
 }
 
@@ -85,8 +122,8 @@ img{
     width: 500px;
     height: auto;
     background: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(33px);
-    backdrop-filter: blur(33px);
+    /* -webkit-backdrop-filter: blur(33px); */
+    /* backdrop-filter: blur(33px); */
     border-radius: 15px;
     position: absolute;
     top: 50%;
@@ -100,6 +137,13 @@ img{
 .input-password{
     position: relative;
 }
+
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+    border: none !important;
+}
+
 
 .eye-toggler{
     position: absolute;
@@ -116,14 +160,6 @@ img{
 .fa-eye{
     pointer-events: none;
 }
-
-/* .fa-eye-slash{
-    position: absolute;
-    right: 15px;
-    top: 11px;
-    z-index: 99;
-    cursor: pointer;
-} */
 
 .signLogin-form h1{
     color: var(--secondary-color);
@@ -150,38 +186,383 @@ img{
     font-weight: normal;
     line-height: 100%;
 }
-/* Sign In Page End
+
+/* Sign-login In Page End
+========================================== */
+
+
+/* Course Search Page
+========================================== */
+#course-container{
+    background: var(--main-black);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.hero{
+    position: relative;
+    min-height: 203px;
+    background-color: var(--main-black);
+    background: linear-gradient(0deg, rgba(24, 24, 24, 0.322), rgba(24, 24, 24, 0.9)), url(../img/code.jpg) center/cover no-repeat;
+}
+
+.hero img{
+    position: absolute;
+    bottom: -1rem;
+    filter:  drop-shadow(1px -1px 0px rgb(104, 103, 103)) drop-shadow(-1px -1px 0px rgb(102, 101, 101));
+}
+
+
+
+.hero .search-form{
+    position: absolute;
+    bottom: 0rem;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    border: 1px solid rgba(148, 154, 166, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background: #373737;
+    border-radius: 8px;
+    z-index: 99;
+}
+
+.search-box{
+    flex: 1;
+    padding: 10px;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0;
+    outline: none;
+    color: var(--main-white);
+}
+
+.fa-search{
+    color: var(--main-white);
+    padding: 0 15px;
+}
+
+.search-btn{
+   margin: 0 10px;
+}
+
+.course{
+    border-bottom: 2px solid #303030;
+    margin-bottom: 20px;
+}
+
+
+.course .headings{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.headings h1{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--main-white);
+    flex: 1;
+}
+
+.headings a{
+    margin-left: 20px;
+    font-size: 1.1rem;
+    text-decoration: underline;
+
+}
+
+.borderFade-line{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 4rem;
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+    z-index: 99;
+    
+}
+
+.course-box{
+    margin: 10px 0;
+}
+
+.course-box img{
+    width: 100%;
+    object-fit: contain;
+    border: 3px solid #949AA6;
+    border-radius: 8px;
+    background: var(--secondary-color);
+}
+
+
+.course-details{
+    line-height: 0.3;
+    color: var(--main-white);
+    padding: 10px 0;
+}
+
+.course-details .course-title a{
+    font-size: 18px;
+    color: var(--main-white);
+}
+
+.course-details .course-title a:hover{
+    color: var(--secondary-color);
+}
+
+.course-details .modules-count{
+    font-size: 14px;
+    color: var(--off-white);
+}
+
+.course-details .playBack-time{
+    font-size: 14px;
+    color: var(--off-white);
+}
+
+
+/* Course Search Page End
 ========================================== */
 
 
 
+/* =================================================
+    Course page
+=====================================================*/
+.course-page-inner{
+    margin: 50px 0;
+}
+
+.course-overview{
+    position: relative;
+    display: flex;
+}
+.course-page .course-heading {
+   padding-top: 0.6rem;
+}
+
+.course-page .course-proper video{
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #949AA6;
+    border-radius: 8px;
+    outline: none;
+}
+
+.modules{
+    flex: 0.3;
+    min-width: 350px;
+    border: 4px solid #303030;
+    padding: 20px 0;
+
+}
+
+.course-proper{
+    flex: 0.7;
+    margin: 0 70px;
+}
+
+.toggle-menu{
+    display: none;
+}
+
+.course-proper-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.course-proper-header .course-proper-title{
+    flex: 1;
+    color: var(--main-white);
+}
+
+.course-proper-header .play-time{
+    color: var(--off-white);
+    margin-left: 20px;
+}
+
+.course-proper-text{
+    color: var(--off-white);
+    letter-spacing: 0.01em;
+}
+
+.users-progress p{
+    letter-spacing: 0.01em;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 28px;
+    
+}
+
+.progress{
+    height: 10px;
+    border-radius: 10px;
+    margin: 0 20px !important;
+}
+
+.module-list li{
+    list-style: none;
+}
+
+.module-list li a{
+    color: var(--off-white);
+    display: block;
+    padding: 10px 20px;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+
+.module-list li a:hover{
+    background: var(--secondary-color);
+    color: var(--main-white);
+}
+
+.comments{
+    margin: 100px 0;
+}
+
+.comments h3{
+    padding: 20px 0;
+    border-bottom: 3px solid var(--off-white);
+    color: var(--main-white);
+    font-size: 24px;
+}
+
+/* ===============================
+        large screens
+=====================================*/
+@media screen and (max-width: 1035px){
+    .modules{
+        position: absolute;
+        left: -100%;
+        transform: translateX(-100%);
+        transform: rotateY(-360deg);
+        background: var(--main-black);
+        z-index: 99;
+        transition: all.5s ease;
+    }
+
+    .modules.slideIn{
+        left: 0;
+        transform: translateX(0);
+        transform: rotateY(360deg);
+        transition: all .5s ease;
+    }
+
+    .toggle-menu{
+        display: block;
+    }
+
+    .course-proper{
+        flex: 1;
+        margin: 0 25px;
+    }
+}
+
+
+/* ===============================
+        tablet screens
+=====================================*/
 @media screen and (max-width: 768px){
     .signLogin-form{
         width: 450px;
     }
+
+    .search-box{
+        width: 10vw;
+    }
+
+    .hero .search-form{
+        width: 85%;
+        bottom: -2rem;
+    }
+
 }
 
+/* ===============================
+        mobile screens
+=====================================*/
 @media screen and (max-width: 468px){
     .signLogin-form{
         width: 400px;
     }
+
+    .search-box{
+        width: 20vw;
+    }
+
+    .search-form{
+        position: relative;
+        left: 0;
+        width: 10vw;
+    }
+
+    .hero{
+        min-height: 150px;
+    }
+
+
+    .course-details .course-title a{
+        font-size: 1rem;
+    }
+
+    .course-details .modules-count{
+        font-size: 0.6rem;
+    }
+    
+    .course-details .playBack-time{
+        font-size: 0.6rem;
+    }
+
+    .course-heading{
+        font-size: 1.3rem;
+    }
+
+    .course-proper-title{
+        font-size: 1.4rem;
+    }
+
+    .play-time{
+        font-size: 0.7rem;
+    }
+    .modules{
+        left: -150%;
+    }
 }
 
+/* ===============================
+        small screens
+=====================================*/
 @media screen and (max-width: 378px){
     .signLogin-form{
         width: 350px;
         padding: 20px;
     }
+
+    
 }
 
+/* ===============================
+        iphone 5s screens
+=====================================*/
 @media screen and (max-width: 328px){
     .signLogin-form{
         width: 310px;
         padding: 20px;
     }
+
+    .modules{
+        min-width: 200px;
+    }
 }
 
-
+/* ===============================
+        xs screens
+=====================================*/
 @media screen and (max-width: 300px){
     .signLogin-form{
         width: 270px;
