@@ -532,6 +532,9 @@ input[type="email"]{
     .modules{
         left: -150%;
     }
+    .course-proper{
+        margin: 0 15px;
+    }
 }
 
 /* ===============================
