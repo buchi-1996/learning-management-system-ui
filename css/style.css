@@ -445,6 +445,10 @@ input[type="email"]{
 
 .sidebar{
     padding: 10px 0;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    overflow-y: hidden;
 }
 
 .sidebar .sidebar-logo img{
@@ -492,6 +496,9 @@ input[type="email"]{
 }
 
 .dashboard-header{
+    position: sticky;
+    top: 0;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -512,7 +519,6 @@ input[type="email"]{
 .dashboard-form{
     display: flex;
     height: 30px;
-    /* width: 470px; */
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #C2C9D1;
     overflow: hidden;
     border-radius: 20px;
@@ -688,18 +694,19 @@ input[type="email"]{
 .footer-wrap{
     display: flex;
     justify-content: space-between;
-    padding: 30px 0 100px;
+    padding: 30px 0 30px
 }
 
 footer .contact-links img{
-    width: 180px;
+    width: 150px;
+    height: auto;
     margin-bottom: 25px;
 }
 
 footer h4 {
     color: var(--secondary-color);
-    font-size: 24px;
-    margin-bottom: 25px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .footer li{
@@ -826,7 +833,27 @@ footer .pages-link li a,
 
     .sidebar .sidebar-logo img{
         width: 50px;
-        margin: 3px 0px 100px;
+        margin: 10px 0px 100px;
+        transform: rotate(-90deg);
+    }
+
+    .dashboard-header form{
+        flex: 0.8;
+    }
+
+    .sidebar{
+        height: 100%;
+        position: sticky;
+        top: 0;
+        overflow-y: hidden;
+    }
+
+    footer .contact-links img{
+        width: 130px;
+    }
+
+    .footer-wrap{
+        flex-direction: column !important;
     }
     
 }
