@@ -12,6 +12,7 @@
     --black-bg: #373737;
     --main-white: #fff;
     --off-white: #C9C9C9;
+    --text-light: #C2C9D1;
 }
 
 
@@ -21,6 +22,14 @@
 img{
     max-width: 100%;
     height: auto;
+}
+
+ul{
+    margin: 0 !important;
+}
+
+li{
+    list-style-type: none;
 }
 
 a{
@@ -34,7 +43,7 @@ h1{
 
 header{
     background: var(--main-black);
-    padding: 3px 0;
+    padding: 10px 0;
 }
 
 nav{
@@ -43,21 +52,17 @@ nav{
     justify-content: space-between;
 }
 
-nav .nav-brand{
-    margin-top: 10px;
-}
-
-nav img{
-    width: 30px;
+.avatar{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
     cursor: pointer;
+    border-radius: 50%;
 }
 
-nav .nav-brand a{
-    color: var(--main-white);
-}
-
-nav .nav-brand a span{
-    color: var(--secondary-color);
+nav .nav-brand img{
+    width: 60px;
+    object-fit: contain;
 }
 
 
@@ -250,8 +255,12 @@ input[type="email"]{
 }
 
 .course{
-    border-bottom: 2px solid #303030;
+    border-top: 2px solid #303030;
     margin-bottom: 20px;
+}
+
+.course:nth-child(1){
+    border-top: none;
 }
 
 
@@ -266,6 +275,7 @@ input[type="email"]{
     font-weight: 500;
     color: var(--main-white);
     flex: 1;
+    padding-top: 20px;
 }
 
 .headings a{
@@ -275,15 +285,6 @@ input[type="email"]{
 
 }
 
-.borderFade-line{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: 4rem;
-    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
-    z-index: 99;
-    
-}
 
 .course-box{
     margin: 10px 0;
@@ -399,7 +400,7 @@ input[type="email"]{
     
 }
 
-.progress{
+.users-progress .progress{
     height: 10px;
     border-radius: 10px;
     margin: 0 20px !important;
@@ -428,15 +429,345 @@ input[type="email"]{
 
 .comments h3{
     padding: 20px 0;
-    border-bottom: 3px solid var(--off-white);
+    border-bottom: 3px solid #303030;
     color: var(--main-white);
     font-size: 24px;
+}
+
+
+
+/* ==================================================================
+        DASHBOARD
+====================================================================*/
+.dashboard-wrapper{
+    display: flex !important;
+}
+
+.sidebar{
+    padding: 10px 0;
+}
+
+.sidebar .sidebar-logo img{
+    width: 60px;
+    object-fit: contain;
+    margin-bottom: 100px;
+}
+
+.sidebar-options{
+    margin: 30px 50px 30px 0;
+}
+
+.sidebar-options a{
+    display: flex;
+    align-items: flex-end;
+    color: var(--text-light);
+}
+
+.sidebar-options a:hover{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+
+.sidebar-options a img{
+    width: 27px;
+    height: 27px;
+}
+
+.sidebar-options:last-child{
+    margin-top: 150px;
+}
+
+
+.sidebar-options a h3{
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 20px;
+    line-height: 0.9;
+}
+
+.dashboard{
+    flex: 1;
+    margin-bottom: 30px;
+}
+
+.dashboard-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333333;
+    padding: 10px;
+}
+
+.dashboard-header form{
+    flex: 0.6;
+}
+
+.dashboard-form img{
+    padding: 0 2px 0 15px;
+    width: 35px;
+}
+
+
+.dashboard-form{
+    display: flex;
+    height: 30px;
+    /* width: 470px; */
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #C2C9D1;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.dashboard-form input{
+    background: transparent !important;
+    outline: none;
+    border: 0;
+    height: inherit;
+    box-shadow: none !important;
+}
+
+.dashboard-inner{
+    background: #292929;
+    padding: 10px 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dashboard-inner .info{
+    background:  rgba(18, 18, 18, 1);
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.dashboard-inner-welcome > h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.dashboard-inner-welcome > p{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboard-inner-leaderboard h3{
+    font-size: 18px;
+    color: var(--main-white);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.dashboard-inner-leaderboard .user-position{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-position > img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.user-position > p{
+    font-size: 15px;
+    margin-top: 12px;
+    margin-left: 20px;
+}
+
+.dashboard-inner-courses .progress{
+    width: 60px;
+    height: 7px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.dashboard-inner-courses .progress-bar{
+    background: var(--secondary-color) !important;
+}
+
+.progress-view{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: 20px;
+}
+
+.progress-view > p{
+    font-size: 14px;
+    flex: 1;
+}
+
+.progress-wrapper{
+    display: flex;
+    margin-left: 20px;
+}
+
+.progress-wrapper > span{
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.dashboard-inner-leaderboard ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-inner-courses-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-inner-courses-heading h3{
+    flex: 1;
+    color: var(--main-white);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dashboard-inner-courses-heading span a{
+    margin-left: 20px;
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+.dashboard-inner-achivements ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.dashboard-inner-achivements h3{
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--main-white);
+    margin-bottom: 20px;
+}
+
+.dashboard-inner-achivements ul li p{
+    font-size: 14px;
+    line-height: 2 !important;
+}
+
+
+.dashboard-inner-points .points-card h1{
+    font-size: 80px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.points-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.points-card span{
+    color: var(--secondary-color);
+    font-weight: bold;
+
+}
+
+
+
+/* ==============================================================
+        FOOTER
+================================================================*/
+.footer{
+    border-top: 1px solid rgba(238, 238, 238, 0.247);
+    background-color: #121212;
+}
+
+.footer-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 100px;
+}
+
+footer .contact-links img{
+    width: 180px;
+    margin-bottom: 25px;
+}
+
+footer h4 {
+    color: var(--secondary-color);
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.footer li{
+    margin: 10px 0;
+}
+
+.pages-link, .other-links, .legal-link{
+    margin: 15px 0;
+
+}
+
+footer .pages-link li a,
+.other-links li a,
+.legal-link li a{
+    color: var(--main-white);
+}
+
+.bottom-footer{
+    border-top: 1px solid rgba(238, 238, 238, 0.247);
+    height: 50px;
+}
+
+
+
+.bottom-footer .icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icons li{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-white);
+    margin-right: 15px;
+    border-radius: 2px;
+}
+
+.icons li:nth-child(4){
+    margin-right: 0;
+}
+
+.icons li a {
+    color:  var(--main-black);
+    
+    padding: 1px 5px;
+
 }
 
 /* ===============================
         large screens
 =====================================*/
 @media screen and (max-width: 1035px){
+    .course-proper{
+        flex: 1;
+        margin: 0 15px;
+    }
+}
+
+
+/* ===============================
+        tablet screens
+=====================================*/
+@media screen and (max-width: 768px){
+
     .modules{
         position: absolute;
         left: -100%;
@@ -462,13 +793,7 @@ input[type="email"]{
         flex: 1;
         margin: 0 25px;
     }
-}
 
-
-/* ===============================
-        tablet screens
-=====================================*/
-@media screen and (max-width: 768px){
     .signLogin-form{
         width: 450px;
     }
@@ -482,6 +807,28 @@ input[type="email"]{
         bottom: -2rem;
     }
 
+    .footer-wrap{
+        flex-wrap: wrap;
+    }
+
+    .pages-link, .other-links, .legal-link{
+        width: 140px;
+    
+    }
+
+    .sidebar-options{
+        margin: 30px 10px 30px 10px;
+    }
+
+    .sidebar-options a h3{
+        display: none;
+    }
+
+    .sidebar .sidebar-logo img{
+        width: 50px;
+        margin: 3px 0px 100px;
+    }
+    
 }
 
 /* ===============================
