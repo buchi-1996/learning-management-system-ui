@@ -459,13 +459,16 @@ input[type="email"]{
 
 .sidebar-options{
     margin: 30px 50px 30px 0;
+    position: relative;
 }
 
 .sidebar-options a{
     display: flex;
     align-items: flex-end;
     color: var(--text-light);
+    z-index: 99;
 }
+
 
 .sidebar-options a:hover{
     text-decoration: none;
@@ -554,12 +557,12 @@ input[type="email"]{
 }
 
 .dashboard-inner-welcome > p{
-    font-size: 13px;
+    font-size: 0.75rem;
     font-weight: 500;
 }
 
 .dashboard-inner-leaderboard h3{
-    font-size: 18px;
+    font-size: 1.07rem;
     color: var(--main-white);
     margin-bottom: 20px;
     font-weight: 600;
@@ -571,21 +574,26 @@ input[type="email"]{
     align-items: center;
 }
 
+.dashboard-inner-leaderboard .badge-img{
+    margin-left: 5px;
+}
+
 .user-position > img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
     object-fit: contain;
+    border: 1px solid #BDBDBD
 }
 
 .user-position > p{
-    font-size: 15px;
+    font-size: 0.9rem;
     margin-top: 12px;
     margin-left: 20px;
 }
 
 .dashboard-inner-courses .progress{
-    width: 60px;
+    min-width: 80px;
     height: 7px;
     border-radius: 10px;
     margin-top: 5px;
@@ -598,18 +606,17 @@ input[type="email"]{
 .progress-view{
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     margin-top: 20px;
 }
 
 .progress-view > p{
-    font-size: 14px;
+    font-size: 0.77rem;
     flex: 1;
 }
 
 .progress-wrapper{
     display: flex;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .progress-wrapper > span{
@@ -627,21 +634,21 @@ input[type="email"]{
 .dashboard-inner-courses-heading{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
 }
 
 .dashboard-inner-courses-heading h3{
     flex: 1;
     color: var(--main-white);
-    font-size: 20px;
+    font-size: 1.07rem;
     font-weight: 600;
 }
 
 .dashboard-inner-courses-heading span a{
     margin-left: 20px;
     color: var(--text-light);
-    font-size: 16px;
+    font-size: 0.9rem;
 }
 
 .dashboard-inner-achivements ul li{
@@ -652,13 +659,13 @@ input[type="email"]{
 
 .dashboard-inner-achivements h3{
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.07rem;
     color: var(--main-white);
     margin-bottom: 20px;
 }
 
 .dashboard-inner-achivements ul li p{
-    font-size: 14px;
+    font-size: 0.8rem;
     line-height: 2 !important;
 }
 
@@ -687,7 +694,7 @@ input[type="email"]{
         FOOTER
 ================================================================*/
 .footer{
-    border-top: 1px solid rgba(238, 238, 238, 0.247);
+    border-top: 1px solid var(--black-bg);
     background-color: #121212;
 }
 
@@ -698,14 +705,18 @@ input[type="email"]{
 }
 
 footer .contact-links img{
-    width: 150px;
+    width: 10rem;
     height: auto;
     margin-bottom: 25px;
 }
 
+.contact-links li a{
+    font-size: 0.9rem;;
+}
+
 footer h4 {
     color: var(--secondary-color);
-    font-size: 20px;
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
@@ -722,10 +733,11 @@ footer .pages-link li a,
 .other-links li a,
 .legal-link li a{
     color: var(--main-white);
+    font-size: 0.9rem;
 }
 
 .bottom-footer{
-    border-top: 1px solid rgba(238, 238, 238, 0.247);
+    border-top: 1px solid var(--black-bg);
     height: 50px;
 }
 
@@ -849,12 +861,9 @@ footer .pages-link li a,
     }
 
     footer .contact-links img{
-        width: 130px;
+        width: 100px;
     }
 
-    .footer-wrap{
-        flex-direction: column !important;
-    }
     
 }
 
