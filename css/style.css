@@ -275,7 +275,6 @@ input[type="email"]{
 .course .headings{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 0;
 }
 
@@ -291,7 +290,7 @@ input[type="email"]{
     margin-left: 20px;
     font-size: 1rem;
     text-decoration: underline;
-    margin-top: 10px;
+    margin-top: 18px;
 
 }
 
