@@ -36,6 +36,10 @@ a{
     color: var(--secondary-color);
 }
 
+a:hover{
+    color: var(--main-white);
+}
+
 h1{
     font-size: 40px;
     font-weight: 400;
@@ -220,7 +224,7 @@ input[type="email"]{
 
 .hero .search-form{
     position: absolute;
-    bottom: 0rem;
+    bottom: 0.5rem;
     right: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -245,6 +249,10 @@ input[type="email"]{
     color: var(--main-white);
 }
 
+.search-box::placeholder{
+    color: #f2f2f2b7;
+}
+
 .fa-search{
     color: var(--main-white);
     padding: 0 15px;
@@ -267,11 +275,12 @@ input[type="email"]{
 .course .headings{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 0;
 }
 
 .headings h1{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: var(--main-white);
     flex: 1;
@@ -280,8 +289,9 @@ input[type="email"]{
 
 .headings a{
     margin-left: 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-decoration: underline;
+    margin-top: 10px;
 
 }
 
@@ -306,7 +316,7 @@ input[type="email"]{
 }
 
 .course-details .course-title a{
-    font-size: 18px;
+    font-size: 1rem;
     color: var(--main-white);
 }
 
@@ -315,12 +325,12 @@ input[type="email"]{
 }
 
 .course-details .modules-count{
-    font-size: 14px;
+    font-size: 0.8rem;
     color: var(--off-white);
 }
 
 .course-details .playBack-time{
-    font-size: 14px;
+    font-size: 0.8rem;
     color: var(--off-white);
 }
 
@@ -779,6 +789,10 @@ footer .pages-link li a,
         flex: 1;
         margin: 0 15px;
     }
+
+    .hero .search-form{
+        bottom: -1rem;
+    }
 }
 
 
@@ -883,7 +897,10 @@ footer .pages-link li a,
         position: relative;
         left: 0;
         width: 10vw;
+        bottom: -3rem;
     }
+
+    
 
     .hero{
         min-height: 150px;
@@ -930,6 +947,11 @@ footer .pages-link li a,
         padding: 20px;
     }
 
+    
+    .hero .search-form{
+        width: 85%;
+        bottom: -3rem;
+    }
     
 }
 
