@@ -16,6 +16,10 @@
 }
 
 
+body{
+    color: var(--main-white);
+}
+
 /* ======================================================================
         HELPER STYLES
 ======================================================================*/
@@ -389,6 +393,7 @@ input[type="email"]{
 .course-proper-header .course-proper-title{
     flex: 1;
     color: var(--main-white);
+    font-size: 1.5rem;
 }
 
 .course-proper-header .play-time{
@@ -399,6 +404,7 @@ input[type="email"]{
 .course-proper-text{
     color: var(--off-white);
     letter-spacing: 0.01em;
+    font-size: 1rem;
 }
 
 .users-progress p{
@@ -425,6 +431,7 @@ input[type="email"]{
     padding: 10px 20px;
     transition: all .5s ease;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 .module-list li a:hover{
@@ -467,14 +474,14 @@ input[type="email"]{
 }
 
 .sidebar-options{
-    margin: 30px 50px 30px 0;
+    margin: 30px 50px 30px 5px;
     position: relative;
 }
 
 .sidebar-options a{
     display: flex;
     align-items: flex-end;
-    color: var(--text-light);
+    color: var(--main-white);
     z-index: 99;
 }
 
@@ -710,6 +717,7 @@ input[type="email"]{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    padding: 0;
 }
 
 
@@ -736,7 +744,7 @@ input[type="email"]{
 .dashboard-favourite-single i{
     color: var(--main-black);
     background: var(--main-white);
-    padding: 3px 5px;
+    padding: 7px 9px;
     border-radius: 50%;
     margin-left: 20px;
 }
@@ -751,10 +759,82 @@ input[type="email"]{
     height: 76px;
     border: 0.5px solid #BDBDBD;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 .single-view-details p{
     font-size: 0.85rem;
+}
+
+
+/* =======================================================================
+        FAVOURITES PAGE
+============================================================================*/
+.favourites{
+    background: #292929;
+    padding: 10px 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.back-btn{
+    padding: 10px 0 15px;
+    border-bottom: 0.5px solid #C2C9D1;
+
+}
+
+.back-btn a{
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.content-wrapper-main h4{
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.content-box{
+    margin: 10px 0;
+    line-height: 0.3;
+}
+
+.content-box-img{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.content-box-img .box-img{
+    width: 100%;
+    object-fit: contain;
+    border: 3px solid #949AA6;
+    border-radius: 8px;
+    background: var(--secondary-color);
+}
+
+.delete-icon{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.content-details .content-title a{
+    font-size: 1rem;
+    color: var(--main-white);
+}
+
+.content-details .content-title a:hover{
+    color: var(--secondary-color);
+}
+
+.content-details .content-modules-count{
+    font-size: 0.8rem;
+    color: var(--off-white);
+}
+
+.content-details .content-playback-time{
+    font-size: 0.8rem;
+    color: var(--off-white);
 }
 
 
