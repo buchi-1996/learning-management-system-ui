@@ -9,6 +9,8 @@
 :root{
     --secondary-color: rgba(242, 153, 74, 1);
     --main-black: #202020;
+    --thick-dark: rgba(18, 18, 18, 1);
+    --bg-inner: #292929;
     --black-bg: #373737;
     --main-white: #fff;
     --off-white: #C9C9C9;
@@ -16,8 +18,9 @@
 }
 
 
-body{
+body, html{
     color: var(--main-white);
+    scroll-behavior: smooth;
 }
 
 /* ======================================================================
@@ -89,8 +92,185 @@ nav .nav-brand img{
     transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-/* Sign-login In Page
-========================================== */
+/* =========================================================
+                    LANDING PAGE
+-================================================*/
+
+#landing-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: #212121;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow:  0 0 1em #000;
+}
+
+.landing-header .logo{
+    flex-shrink: 0;
+}
+
+#landing-header .toggle{
+    display: none;
+}
+
+#landing-header nav ul{
+    display: flex;
+    /* margin-left: 50px !important; */
+}
+
+#landing-header nav ul li{
+    list-style: none;
+    margin: 0 13px;
+}
+
+#landing-header nav ul li a{
+    color: #fff;
+    font-weight: 500;
+}
+
+#landing-header img{
+    width: 70px;
+    object-fit: contain;
+
+}
+
+#landing-header .buttons{
+    margin-left: 20px;
+}
+
+#landing-header .buttons a{
+    background: inherit;
+    border: none;
+    color: #fff;
+    padding: 10px 24px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+#landing-header .start-btn{
+    border: 1px solid #fff !important;
+}
+
+.landing-showcase{
+    background: url(../img/landing-bg-overlay.jpg) left center/ cover fixed no-repeat;
+    padding: 0 24px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about-us{
+    padding: 50px 24px;
+}
+
+.about-text .color{
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+}
+
+.about-text p{
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.get-started-btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to right, rgb(117, 59, 113), darkorange) !important;
+    margin-top: 20px;
+}
+
+.landing-showcase-details h2{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: var(--main-white);
+}
+
+.landing-showcase p{
+    font-size: 18px;
+    color: var(--off-white);
+}
+
+.landing-showcase-details img{
+    width: 130px;
+    height: auto;
+}
+
+#landing-body .offer{
+    background: linear-gradient(to  right, rgba(238, 238, 238, 0.178), rgba(238, 238, 238, 0.178));
+    padding: 50px 24px;
+}
+
+.offer-box{
+    border-radius: 10px;
+    color: var(--black-bg);
+    text-align: center;
+    overflow: hidden;
+}
+
+.offer-box:hover{
+    box-shadow: 0 0 1em #ccc;
+    transform: translateY(-5%);
+    transition: all .5s ease;
+}
+
+.offer-box img{
+    height: 150px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.offer-text{
+    padding: 10px;
+}
+
+.offer-text h4{
+    font-size: 20px;
+}
+
+.offer-text span{
+    font: 14px;
+    font-weight: bold;
+}
+
+.contact{
+    padding: 50px 24px;
+}
+
+.contact .contact-card{
+    box-shadow: 0 0 1em #ccc;
+    padding: 24px 34px;
+    background: var(--thick-dark);
+}
+
+.contact-text h4{
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: var(--black-bg);
+}
+
+.contact-text p{
+    color: var(--main-black);
+}
+
+
+
+
+/* =====================================================
+            SIGN IN AND LOGIN
+===========================================*/
 
 #sign-loginWrapper{
     position: relative;
@@ -552,14 +732,14 @@ input[type="email"]{
 }
 
 .dashboard-inner{
-    background: #292929;
+    background: var(--bg-inner);
     padding: 10px 5px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 .dashboard-inner .info{
-    background:  rgba(18, 18, 18, 1);
+    background: var(--thick-dark);
     border-radius: 10px;
     padding: 10px 15px;
     color: var(--text-light);
@@ -771,7 +951,7 @@ input[type="email"]{
         FAVOURITES PAGE
 ============================================================================*/
 .favourites{
-    background: #292929;
+    background: var(--bg-inner);
     padding: 10px 15px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -795,7 +975,7 @@ input[type="email"]{
 }
 
 .content-box{
-    margin: 10px 0;
+    margin: 25px 0;
     line-height: 0.3;
 }
 
@@ -836,6 +1016,131 @@ input[type="email"]{
     font-size: 0.8rem;
     color: var(--off-white);
 }
+
+/* ===========================================================
+            MY COURSES
+================================================================*/
+.my-courses{
+    background: var(--bg-inner);
+    padding: 10px 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.content-instructor{
+    color: var(--off-white);
+    font-size: 14px;
+
+}
+
+.content-date-enrolled{
+    color: var(--off-white);
+    font-size: 12px;
+}
+
+.content-progress{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+.content-progress .progress{
+    flex: 1;
+    height: 7px;
+    border-radius: 10px;
+}
+
+.content-progress span{
+    margin-left: 10px;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.content-progress .range{
+    font-size: 14px;
+}
+
+/* ===================================================================
+        SETTINGS
+====================================================================*/
+.settings{
+    background: var(--bg-inner);
+    padding: 10px 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+} 
+
+.settings h4{
+    padding: 20px 0;
+    font-size: 1.2rem
+}
+
+.upload-btn{
+    border-radius: 50px ;
+    margin-top: 20px;
+}
+
+.user-profile-upload{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 1px solid var(--text-light);
+    border-radius: 10px;
+    background: var(--thick-dark);
+}
+
+.user-profile-upload .user-pic{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--main-white);
+    background: var(--off-white);
+}
+
+.user-pic img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-pic .trash-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--main-white);
+}
+
+.user-pic .trash-icon:hover{
+    background: var(--main-white);
+    color: #000;
+}
+
+.trash-icon .fa-trash-o{
+    font-size: 18px;
+}
+
+.user-details-form .form-card{
+    background: var(--thick-dark);
+    color: var(--text-light);
+    border: 1px solid var(--text-light);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+
+
 
 
 /* ==============================================================
@@ -1016,6 +1321,66 @@ footer .pages-link li a,
         width: 100px;
     }
 
+    #landing-header{
+        padding: 10px 20px;
+    }
+
+    .landing-showcase{
+        padding: 50px 0;
+    }
+
+
+
+    #landing-header .toggle{
+        display: block;
+    }
+
+    
+    #landing-header nav{
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--black-bg);
+        padding: 20px;
+        top: 60px;
+        left: 0;
+        transform: translateX(-100%);
+        transition: all .5s ease
+    }
+
+    #landing-header nav.open{
+        transform: translateX(0);
+     
+    }
+
+    #landing-header nav ul{
+        flex-direction: column;
+        margin-left: 0 !important;
+    }
+
+    #landing-header nav ul li{
+        margin: 10px 0;
+    }
+
+    #landing-header .buttons{
+        margin-left: 0;
+    }
+
+    nav .buttons button{
+        display: block;
+        
+    }
+
+    .buttons button:first-child{
+        padding: 10px 0 !important;
+        margin: 5px 0;
+        outline: none;
+    }
+
+
+    .contact{
+        padding: 50px 0;
+    }
     
 }
 
@@ -1042,6 +1407,10 @@ footer .pages-link li a,
 
     .hero{
         min-height: 150px;
+    }
+
+    .user-profile-upload{
+        justify-content: center;
     }
 
 
@@ -1104,6 +1473,10 @@ footer .pages-link li a,
 
     .modules{
         min-width: 200px;
+    }
+
+    .sidebar-options:last-child{
+        margin-top: 120px;
     }
 }
 
