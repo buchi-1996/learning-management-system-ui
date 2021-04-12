@@ -119,7 +119,6 @@ nav .nav-brand img{
 
 #landing-header nav ul{
     display: flex;
-    /* margin-left: 50px !important; */
 }
 
 #landing-header nav ul li{
@@ -160,7 +159,7 @@ nav .nav-brand img{
 .landing-showcase{
     background: url(../img/landing-bg-overlay.jpg) left center/ cover fixed no-repeat;
     padding: 0 24px;
-    height: 100vh;
+    height: calc(100vh - 60px);
     display: flex;
     align-items: center;
 }
@@ -1337,6 +1336,8 @@ footer .pages-link li a,
 
     
     #landing-header nav{
+        width: 50%;
+        height: calc(100vh - 60px);
         position: absolute;
         flex-direction: column;
         align-items: flex-start;
@@ -1345,12 +1346,17 @@ footer .pages-link li a,
         top: 60px;
         left: 0;
         transform: translateX(-100%);
-        transition: all .5s ease
+        transition: all .5s ease;
+        overflow-y: scroll;
     }
 
     #landing-header nav.open{
         transform: translateX(0);
      
+    }
+
+    #landing-header nav::-webkit-scrollbar{
+        display: none;
     }
 
     #landing-header nav ul{
@@ -1363,23 +1369,35 @@ footer .pages-link li a,
     }
 
     #landing-header .buttons{
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 
-    nav .buttons button{
+    nav .buttons a{
         display: block;
         
     }
 
-    .buttons button:first-child{
+    .buttons a:first-child{
         padding: 10px 0 !important;
         margin: 5px 0;
         outline: none;
     }
 
+    #landing-body.overflow{
+        overflow-y: hidden;
+    }
+
+    .about-us{
+        padding: 50px 0px;
+    }
+
 
     .contact{
         padding: 50px 0;
+    }
+
+    .landing-showcase{
+        background: url(../img/landing-bg-overlay.jpg) center/ cover fixed no-repeat;
     }
     
 }
@@ -1458,6 +1476,11 @@ footer .pages-link li a,
     .hero .search-form{
         width: 85%;
         bottom: -3rem;
+    }
+
+    #landing-header .buttons a{
+        font-weight: normal;
+        padding: 5px 15px;
     }
     
 }
