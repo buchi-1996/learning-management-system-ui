@@ -1334,12 +1334,14 @@ footer .pages-link li a,
         display: block;
     }
 
+
     
     #landing-header nav{
         width: 50%;
         height: calc(100vh - 60px);
         position: absolute;
         flex-direction: column;
+        justify-content: center;
         align-items: flex-start;
         background: var(--black-bg);
         padding: 20px;
@@ -1389,6 +1391,20 @@ footer .pages-link li a,
 
     .about-us{
         padding: 50px 0px;
+    }
+
+    .about-text{
+        margin: 0 !important;
+    }
+
+    .about-text h2{
+        text-align: center;
+        font: 1.2rem;
+    }
+
+    .about-text p{
+        font-size: 1rem;
+        text-align: center;
     }
 
 
